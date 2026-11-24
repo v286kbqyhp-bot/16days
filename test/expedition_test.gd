@@ -11,7 +11,22 @@ func check(condition: bool, message: String) -> void:
 		printerr(message)
 
 
+func check_equipment_instances() -> void:
+	var camp = Camp.create(IDS, ["spear-01", "spear-02"], ["crest-01", "crest-02"])
+	check(camp.equip("a", "weapon", "spear-01") == OK, "first spear")
+	check(camp.equip("b", "weapon", "spear-02") == OK, "second spear")
+	var before: Dictionary = camp.loadout("b")
+	check(camp.equip("b", "weapon", "spear-01") == ERR_ALREADY_IN_USE, "reject shared instance")
+	check(camp.loadout("b") == before, "preserve previous spear")
+	before.weapon = null
+	check(camp.loadout("b").weapon == "spear-02", "loadout is a copy")
+	check(camp.equip("b", "weapon", null) == OK, "remove second spear")
+	check(camp.equip("b", "weapon", null) == OK, "repeat unequip")
+	check(camp.loadout("a").weapon == "spear-01", "other instance unaffected")
+
+
 func _initialize() -> void:
+	check_equipment_instances()
 	check(Camp.create(["a","a","b"], [], []) == null, "duplicate character")
 	for size in range(1, 4):
 		var camp = Camp.create(IDS, ["wa","wb","wc"], ["ca","cb","cc"])
