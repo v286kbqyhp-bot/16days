@@ -21,3 +21,5 @@ godot --headless --path . --script test/expedition_test.gd
 2026-11-24，作者提供角色、武器、纹章与出征规则。OpenAI Codex 根据这些规则编写营地模块、测试与工程配置，并运行 Godot 无窗口测试。当前提交尚待作者试玩和复核。
 
 比赛提交需要 AtomGit 仓库、对应提交标识、Windows 可运行版本，以及官方模板的 AI 使用与素材声明。详见[大赛官网](https://2026gamejam.osgame.org/)。
+
+[项目要求、比赛交付与双端分工](docs/requirements.md)
