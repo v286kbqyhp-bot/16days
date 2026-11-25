@@ -23,3 +23,7 @@ godot --headless --path . --script test/expedition_test.gd
 比赛提交需要 AtomGit 仓库、对应提交标识、Windows 可运行版本，以及官方模板的 AI 使用与素材声明。详见[大赛官网](https://2026gamejam.osgame.org/)。
 
 [项目要求、比赛交付与双端分工](docs/requirements.md)
+
+## 经济试算
+
+在 Godot 中打开 `economy/prototype.tres` 调整采集、税、利息、价格与奖励预算。运行 `godot --headless --path . --script test/economy_test.gd` 检查公式边界。目前提供数值查询与验算，待营地交易和关卡结算调用。
