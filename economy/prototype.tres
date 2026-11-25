@@ -4,23 +4,54 @@
 
 [resource]
 script = ExtResource("1")
+; 全保收入（g，试算）：第一阶段所有采集器都保住时，全队一趟共采到多少粉尘。
 full_yield_g = 30
+; 采集器全毁时保留的比例（试算）。0.07 表示保留全保收入的 7%，调大能减轻全毁损失。
 all_destroyed_ratio = 0.07
+; 全队濒死提前回营时保留的比例（试算）。先按存活采集器算收入，再乘这个数；若采集器全毁，只算全毁收益。
 retreat_ratio = 0.5
+; 基础税额（g，试算）：第一阶段每次回营要交多少。调高后，税后可用于成长的粉尘会减少。
 tax_base_g = 10
+; 采集收入的阶段倍率（试算）。1 表示各阶段相同；1.1 表示每进一个阶段，全保收入比上一阶段多 10%。
 yield_growth = 1.0
+; 税额的阶段倍率（试算）。1 表示税额固定；1.2 表示每进一个阶段税额增长 20%。
 tax_growth = 1.0
+; 计息门槛（g）：本金每存满多少克算一份利息。必须大于 0；门槛越高，同样的本金赚得越少。
 interest_step_g = 5
+; 每份利息（g）：本金每满一个计息门槛，就发这么多克。当前规则是每满 5 g 得 1 g。
 interest_gain_g = 1
+; 利息上限（g）：一次回营最多能领多少利息。
 interest_cap_g = 5
+; 消费提醒线（百分数）：填 80 表示 80%。若下次税额是 10 g，消费后剩 7 g 会提醒，剩 8 g 直接成交。每次回营最多提醒一次。
 warning_percent = 80
+; 纹章赎回倍率：用该纹章的商店售价乘此数。1.1 表示加价 10%，最后向上取整克。
 redemption_multiplier = 1.1
-base_prices_g = Dictionary[String, int]({"coin": 10, "rune": 4, "common_crest": 6, "legendary_crest": 12, "weapon_craft": 6})
+; 第一阶段的品类基价（g，试算）。coin＝强化硬币，rune＝符文，common_crest＝普通纹章，legendary_crest＝传奇纹章，weapon_craft＝制作武器的费用。
+base_prices_g = Dictionary[String, int]({
+; 强化硬币售价（g / 枚）
+"coin": 10,
+; 普通符文基价（g）
+"rune": 4,
+; 普通纹章基价（g）
+"common_crest": 6,
+; 传奇纹章基价（g）
+"legendary_crest": 12,
+; 按图纸制作一把武器的基础费用（g）
+"weapon_craft": 6
+})
+; 价格的阶段倍率（试算）。1 表示各阶段同价；大于 1 时，商品和武器制作费用随阶段上涨。
 price_growth = 1.0
+; 出售回收比例（试算）。0.5 表示卖出时收回估值的一半，零头向下取整克。
 resale_ratio = 0.5
+; 装符文手续费（g，试算）：每装一枚收取的粉尘。
 rune_install_g = 1
+; 完整拆卸手续费（g，试算）：花粉尘取回符文；免费清除会销毁符文。
 rune_remove_g = 1
+; 胜利时抽取关卡奖励的次数（试算）。调大可多抽几次，具体物品由关卡奖池决定。
 victory_draws = 2
+; 失败时抽取关卡奖励的次数（试算）。与胜利抽数一起调节胜败收益差距。
 defeat_draws = 1
+; 附加任务奖励（枚，试算）：完成一项有硬币奖励的任务，基础发放多少枚强化硬币。
 objective_coins = 1
+; 地图额外宝箱奖励（枚，试算）：打开一只装有硬币的额外宝箱，基础发放多少枚强化硬币。
 map_chest_coins = 1
