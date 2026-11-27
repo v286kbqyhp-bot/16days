@@ -24,6 +24,10 @@ godot --headless --editor --path game --import
 godot --headless --path game --quit
 godot --headless --path game --script ../tests/expedition_test.gd
 godot --headless --path game --script ../tests/economy_test.gd
+godot --headless --path game --script ../tests/crest_maps_test.gd
+godot --path game --script ../tests/crest_render_preview.gd
 ```
 
 出征与经济测试分别输出失败数，预期均为 0，进程退出码为 0。新增用例放进 tests/，并在此补上运行入口。导出运行与跨平台验收另记平台、Godot 版本和提交号。
+
+纹章贴图测试预期 `failures=0`。`crest_render_preview.gd` 需真实图形渲染，不能加 `--headless`；可通过 `CREST_CAPTURE_DIR` 指定帧输出目录。交互审阅运行 `godot --path game res://../tests/crest_glint_live.tscn`，空格暂停／继续，R 重播。

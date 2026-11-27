@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-27",
+  "engine": "Godot 4.7.2",
+  "renderer": "GL Compatibility / OpenGL 4.1 Metal / Apple M5",
+  "maps_test": "failures=0; normal_length_error=0.009193",
+  "render_test": "CREST_RENDER_TEST failures=0 changed_frames=18 renderer=gl_compatibility",
+  "checks": [
+    "source color unchanged",
+    "author bottom 8 pixels retained",
+    "normal/mask alpha aligned",
+    "OpenGL XYZ orientation",
+    "zero intensity equals baseline",
+    "black mask equals baseline",
+    "animated alpha unchanged",
+    "four directional lighting images visually reviewed",
+    "live preview visually observed"
+  ],
+  "sha256": {
+    "game/art/crests/crest_common_normal.png": "7c7d3123ecd45a923b92a1aa4d35b3c3b9ad1b1d4428ed51b2ac1a15a65e4943",
+    "game/art/crests/template_disc_normal.png": "281a6d42fd5d731a4e1ec461aa4abe4af888acf72581701779db1e1127c1534d",
+    "game/art/crests/crest_common_highlight_mask.png": "7041c7bd346964a4fdf46c4cf82cb94d57184260320e082d21c994d444e29bdb",
+    "game/art/crests/template_disc_color.png": "266a5715449e2abfa3a88359db3aa80bef076c3c965a7629bcd1d227776a1734",
+    "game/art/crests/template_disc_highlight_mask.png": "ebc107d0dbabf85195000eb5161632a8c27d94bb34198ddca53a6bac1f56dde1",
+    "game/art/crests/crest_common_color.png": "c2b3ec18d60cfb319c7f4c1902e1f5e33c987fc9ad882a6b8f279b3620c7cf3e",
+    "game/art/crests/crest_glint.gdshader": "3577a6a4f51542a5694b3f5e115e5b633c109e53a75efb71e712d57f82eb9821",
+    "docs/art/crests/source/crest_common_color.pxo": "722bd2100331d20e33583592d98f5a9bf7d070f2864e1328aebe23b9d8e5fe38"
+  }
+}
