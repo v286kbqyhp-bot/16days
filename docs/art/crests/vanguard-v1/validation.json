@@ -1,0 +1,32 @@
+{
+  "visual_status": "awaiting author review",
+  "layer_ownership_audit": {
+    "crest": "vanguard",
+    "layers": [
+      "圆盘_蓝天底色",
+      "圆盘_高光阴影",
+      "背景_弧形云带",
+      "背景_弧形地面",
+      "骑士_披风与红缨",
+      "战马_胸与前腿",
+      "战马_红色鞍布",
+      "骑士_胸甲与持枪臂",
+      "骑士_银盔与面甲",
+      "战马_飞扬鬃毛",
+      "战马_白马头部",
+      "战马_面铠与缰绳",
+      "长枪_红白枪杆",
+      "骑士_握枪手甲",
+      "长枪_近景银色枪头"
+    ],
+    "rim_layer": "圆盘_高光阴影",
+    "rim_index": 1,
+    "all_nonempty": true,
+    "outside_pixels": 0,
+    "decoration_rim_overlap": 0,
+    "bottom_owned_by_rim": true,
+    "pxo_png_match": true,
+    "pxo_sha256": "fd29f58dd4e96fd59aa17e062b01e1b165aef7622391fea7bbf0eb6f15dead99"
+  },
+  "pxo_sha256": "fd29f58dd4e96fd59aa17e062b01e1b165aef7622391fea7bbf0eb6f15dead99"
+}

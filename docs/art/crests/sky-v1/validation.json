@@ -1,0 +1,16 @@
+{
+  "layers": {
+    "color": 5,
+    "normal": 2,
+    "highlight_mask": 2
+  },
+  "author_disc_layers_unchanged": true,
+  "pxo_png_match": true,
+  "alpha_matches_template": true,
+  "wing_symmetry": true,
+  "outline_one_inner_pixel": true,
+  "normal_unit_length": true,
+  "mask_grayscale": true,
+  "source_common_sha256": "722bd2100331d20e33583592d98f5a9bf7d070f2864e1328aebe23b9d8e5fe38",
+  "status": "draft awaiting author review"
+}

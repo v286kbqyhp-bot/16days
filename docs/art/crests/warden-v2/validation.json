@@ -1,0 +1,24 @@
+{
+  "pxo_png_match": true,
+  "disc_alpha_unchanged": true,
+  "rim_geometry_unchanged": true,
+  "details_inside_shield": true,
+  "shield_bounds_before": [
+    13,
+    10,
+    35,
+    39
+  ],
+  "shield_bounds_after": [
+    11,
+    10,
+    37,
+    39
+  ],
+  "background_before": "#07080b",
+  "background_after": "#1b1d24",
+  "main_left_facet_before": "#383346",
+  "main_left_facet_after": "#272333",
+  "pxo_sha256": "dc89369adeba33a8ca5a51d1403cce81416c3e31d9bdc024114dd7db60675459",
+  "visual_status": "wider darker obsidian shield on brighter black background; awaiting author review"
+}

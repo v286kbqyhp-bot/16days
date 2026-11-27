@@ -1,0 +1,74 @@
+{
+  "only_rim_layer_changed": true,
+  "disc_alpha_unchanged": true,
+  "rim_colors": [
+    "#fffef8",
+    "#d1d0ca",
+    "#a4a6a5",
+    "#747a7d"
+  ],
+  "pxo_sha256": "de8fa1c04276fcf2135e9d51ed6ec7f329757050cf6b02e59cb9bc8aa665e69f",
+  "visual_status": "white rim correction; author review pending",
+  "bottom_edge_correction_20261127": {
+    "crest": "warden",
+    "changed_pixels": [
+      [
+        20,
+        46
+      ],
+      [
+        21,
+        46
+      ],
+      [
+        22,
+        46
+      ],
+      [
+        23,
+        46
+      ],
+      [
+        24,
+        46
+      ],
+      [
+        25,
+        46
+      ],
+      [
+        26,
+        46
+      ],
+      [
+        27,
+        46
+      ]
+    ],
+    "alpha_unchanged": true,
+    "pxo_png_match": true,
+    "bottom_rim_color": "#747a7d",
+    "pxo_sha256": "de8fa1c04276fcf2135e9d51ed6ec7f329757050cf6b02e59cb9bc8aa665e69f"
+  },
+  "historical_checks_note": "Earlier comparisons describe the original draft; bottom-edge correction changes only x20..27 y46 in the final composite.",
+  "layer_ownership_audit": {
+    "crest": "warden",
+    "layers": [
+      "偏白背景_原圆盘结构",
+      "圆盘明暗边_原结构换色",
+      "黑曜石盾_轮廓底色",
+      "黑曜石盾_主切面",
+      "黑曜石盾_断面",
+      "黑曜石盾_单像素边缘",
+      "黑曜石盾_局部亮面"
+    ],
+    "rim_layer": "圆盘明暗边_原结构换色",
+    "rim_index": 1,
+    "all_nonempty": true,
+    "outside_pixels": 0,
+    "decoration_rim_overlap": 0,
+    "bottom_owned_by_rim": true,
+    "pxo_png_match": true,
+    "pxo_sha256": "de8fa1c04276fcf2135e9d51ed6ec7f329757050cf6b02e59cb9bc8aa665e69f"
+  }
+}

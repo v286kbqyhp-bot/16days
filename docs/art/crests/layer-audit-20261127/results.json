@@ -1,0 +1,116 @@
+[
+  {
+    "crest": "clear_eye",
+    "layers": [
+      "圆盘_青绿底色",
+      "圆盘_高光阴影",
+      "风_后方环绕",
+      "小人_躯干与双腿",
+      "小人_脸与颈",
+      "小人_头发与五官",
+      "小人_收拢双臂",
+      "小人_胸前结印双手",
+      "风_前景掠过"
+    ],
+    "rim_layer": "圆盘_高光阴影",
+    "rim_index": 1,
+    "all_nonempty": true,
+    "outside_pixels": 0,
+    "decoration_rim_overlap": 0,
+    "bottom_owned_by_rim": true,
+    "pxo_png_match": true,
+    "pxo_sha256": "76a0b1c9fb79dda328c912af5bd97eaa910c455e48b4da5ff3960de7b1dbec8e"
+  },
+  {
+    "crest": "sky",
+    "layers": [
+      "蔚蓝天空_保留v2",
+      "圆盘明暗边_保留v2",
+      "背后白云_保留v2",
+      "圣天使_象牙白双翼",
+      "圣天使_金色圆光",
+      "圣天使_飘动长袍",
+      "圣天使_面部与手",
+      "圣天使_赭金头发",
+      "圣天使_衣领与腰带",
+      "下方白云_保留v2"
+    ],
+    "rim_layer": "圆盘明暗边_保留v2",
+    "rim_index": 1,
+    "all_nonempty": true,
+    "outside_pixels": 0,
+    "decoration_rim_overlap": 0,
+    "bottom_owned_by_rim": true,
+    "pxo_png_match": true,
+    "pxo_sha256": "cd02c49a5dbb226358c14627869cd20e56ac0494553324c78dcc09de73d797ee"
+  },
+  {
+    "crest": "warden",
+    "layers": [
+      "偏白背景_原圆盘结构",
+      "圆盘明暗边_原结构换色",
+      "黑曜石盾_轮廓底色",
+      "黑曜石盾_主切面",
+      "黑曜石盾_断面",
+      "黑曜石盾_单像素边缘",
+      "黑曜石盾_局部亮面"
+    ],
+    "rim_layer": "圆盘明暗边_原结构换色",
+    "rim_index": 1,
+    "all_nonempty": true,
+    "outside_pixels": 0,
+    "decoration_rim_overlap": 0,
+    "bottom_owned_by_rim": true,
+    "pxo_png_match": true,
+    "pxo_sha256": "de8fa1c04276fcf2135e9d51ed6ec7f329757050cf6b02e59cb9bc8aa665e69f"
+  },
+  {
+    "crest": "up",
+    "layers": [
+      "圆盘_明黄底色",
+      "背景_橙红色放射纹",
+      "圆盘_配套高光阴影",
+      "UP_单像素外描边",
+      "UP_右下侧面厚度",
+      "UP_红色正面",
+      "UP_倒角暗部",
+      "UP_左上倒角高光"
+    ],
+    "rim_layer": "圆盘_配套高光阴影",
+    "rim_index": 2,
+    "all_nonempty": true,
+    "outside_pixels": 0,
+    "decoration_rim_overlap": 0,
+    "bottom_owned_by_rim": true,
+    "pxo_png_match": true,
+    "pxo_sha256": "2a2a96ab62d12ba54758848c85d1c7a21e8c076dfc8fd8b9917a9e070310f4e8"
+  },
+  {
+    "crest": "vanguard",
+    "layers": [
+      "圆盘_蓝天底色",
+      "圆盘_高光阴影",
+      "背景_弧形云带",
+      "背景_弧形地面",
+      "骑士_披风与红缨",
+      "战马_胸与前腿",
+      "战马_红色鞍布",
+      "骑士_胸甲与持枪臂",
+      "骑士_银盔与面甲",
+      "战马_飞扬鬃毛",
+      "战马_白马头部",
+      "战马_面铠与缰绳",
+      "长枪_红白枪杆",
+      "骑士_握枪手甲",
+      "长枪_近景银色枪头"
+    ],
+    "rim_layer": "圆盘_高光阴影",
+    "rim_index": 1,
+    "all_nonempty": true,
+    "outside_pixels": 0,
+    "decoration_rim_overlap": 0,
+    "bottom_owned_by_rim": true,
+    "pxo_png_match": true,
+    "pxo_sha256": "fd29f58dd4e96fd59aa17e062b01e1b165aef7622391fea7bbf0eb6f15dead99"
+  }
+]

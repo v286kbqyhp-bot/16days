@@ -1,0 +1,155 @@
+[
+  {
+    "id": "crest_common",
+    "name": "普通纹章",
+    "size": [
+      48,
+      48
+    ],
+    "layers": 4
+  },
+  {
+    "id": "crest_sky",
+    "name": "天空纹章",
+    "size": [
+      48,
+      48
+    ],
+    "layers": 4
+  },
+  {
+    "id": "crest_warden",
+    "name": "守望者纹章",
+    "size": [
+      48,
+      48
+    ],
+    "layers": 4
+  },
+  {
+    "id": "crest_veteran",
+    "name": "老兵纹章",
+    "size": [
+      48,
+      48
+    ],
+    "layers": 4
+  },
+  {
+    "id": "crest_clear_eye",
+    "name": "清风纹章",
+    "size": [
+      48,
+      48
+    ],
+    "layers": 4
+  },
+  {
+    "id": "crest_vanguard",
+    "name": "先锋纹章",
+    "size": [
+      48,
+      48
+    ],
+    "layers": 4
+  },
+  {
+    "id": "crest_ambush",
+    "name": "奇袭纹章",
+    "size": [
+      48,
+      48
+    ],
+    "layers": 4
+  },
+  {
+    "id": "crest_hit_and_run",
+    "name": "游击纹章",
+    "size": [
+      48,
+      48
+    ],
+    "layers": 4
+  },
+  {
+    "id": "crest_phantom",
+    "name": "疾影纹章",
+    "size": [
+      48,
+      48
+    ],
+    "layers": 4
+  },
+  {
+    "id": "crest_turret",
+    "name": "重炮纹章",
+    "size": [
+      48,
+      48
+    ],
+    "layers": 4
+  },
+  {
+    "id": "crest_armor",
+    "name": "重甲纹章",
+    "size": [
+      48,
+      48
+    ],
+    "layers": 4
+  },
+  {
+    "id": "crest_pulse_heal",
+    "name": "震荡纹章",
+    "size": [
+      48,
+      48
+    ],
+    "layers": 4
+  },
+  {
+    "id": "crest_claw",
+    "name": "狂猎纹章",
+    "size": [
+      48,
+      48
+    ],
+    "layers": 4
+  },
+  {
+    "id": "crest_ember_body",
+    "name": "熔岩纹章",
+    "size": [
+      48,
+      48
+    ],
+    "layers": 4
+  },
+  {
+    "id": "crest_arrogance",
+    "name": "狂傲纹章",
+    "size": [
+      48,
+      48
+    ],
+    "layers": 4
+  },
+  {
+    "id": "crest_mender",
+    "name": "抚慰纹章",
+    "size": [
+      48,
+      48
+    ],
+    "layers": 4
+  },
+  {
+    "id": "crest_bloodlust",
+    "name": "嗜血纹章",
+    "size": [
+      48,
+      48
+    ],
+    "layers": 4
+  }
+]

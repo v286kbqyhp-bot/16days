@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-27",
+  "evidence_id": "ev_52eed9ce9cb0a5a89271389d99316ec81d059511ee4172b229b588366ade0a40",
+  "method": "沿已由 REA CLI 6.4.0 提取的 Card:hover → Card:juice_up → Moveable:juice_up / move_juice / move_scale 静态核对；未再次重复提取相同游戏包",
+  "source_hashes": {
+    "card.lua": "5073d834e08119da9516f1795a8c3d93110669aeb409c29ad1b308e0eb0be453",
+    "engine/moveable.lua": "84cb784637b125962d564e3070befc87b97fc155ee2214a371cce995d7bdfb21",
+    "engine/node.lua": "8a74d3ddfd10a9fcad968fd4acff5dd446d296256708169aaa116779184a04ed",
+    "globals.lua": "e39b5bf91b907c593d72735dc8119aff891bd67ee6e4560254e8ee0a3824d546",
+    "engine/controller.lua": "0963792ad59392a4d9b55d9636dc6ff6f7f390fbdbff5efa1c8910053a25dc08"
+  },
+  "source_parameters": {
+    "hover_arguments": [
+      0.05,
+      0.03
+    ],
+    "card_wrapper_multiplier": 0.4,
+    "effective_scale_amplitude": 0.02,
+    "effective_rotation_amplitude_radians": 0.012,
+    "rotation_sign": "random positive or negative",
+    "duration_seconds": 0.4,
+    "initial_scale": 0.988,
+    "scale_angular_frequency": 50.8,
+    "scale_decay_power": 3,
+    "rotation_angular_frequency": 40.8,
+    "rotation_decay_power": 2,
+    "scale_velocity_damping": "exp(-60*dt)"
+  },
+  "locations": [
+    "card.lua:4306-4308",
+    "card.lua:4333-4337",
+    "engine/moveable.lua:250-273",
+    "engine/moveable.lua:423-430"
+  ],
+  "adaptation_parameters": {
+    "fixed_step_hz": 60,
+    "tilt_multiplier": 12.0,
+    "rest_lift_width_ratio": [
+      0.04,
+      -0.04
+    ],
+    "hotspot_radius_width_ratio": 0.38,
+    "pointer_translation": false,
+    "release_hit_test": "inverse projection of displayed body then original albedo alpha; half-screen-pixel raster coverage"
+  },
+  "distinction": "原版弹动参数来自上述源码；局部透视提取 -a*|p-m|² 的 +2a*dot(p,m) 方向项，倍率12、固定进入浮起、热区与固定阴影为本项目适配。上一版方向平移12%是误解，已删除，不属于原作参数。",
+  "verification": "当前GPU检查 CREST_HOVER_TEST failures=0；八方向、三个时刻，30389个边界像素遗漏0；透视中心、弹动、固定阴影及移出复位回归通过。旧圆形放下缓冲的验证已被替换。",
+  "hotspot_source": {
+    "entry_buffer": 0,
+    "hovered_buffer": 0.05,
+    "blind_width_game_units": 1.3,
+    "locations": [
+      "engine/node.lua:155",
+      "globals.lua:277",
+      "functions/UI_definitions.lua:3981",
+      "engine/controller.lua:360-364"
+    ],
+    "shape_distinction": "原作矩形加0.05缓冲的事实保留。作者否决项目旧圆形缓冲范围；当前拿起用小圆，放下用已显示纹章的完整alpha轮廓，由逆透视及逆节点变换判定，不声称来自原作。"
+  }
+}

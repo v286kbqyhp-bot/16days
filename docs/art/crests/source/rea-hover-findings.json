@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-27",
+  "tool": "REA CLI 6.4.0",
+  "skill_version": 63,
+  "evidence_id": "ev_52eed9ce9cb0a5a89271389d99316ec81d059511ee4172b229b588366ade0a40",
+  "artifact": {
+    "name": "Balatro.love",
+    "digest": {
+      "sha256": "48c7a0791796a969d2cd0891ebdc9922b2988eb5aaad8ad7a72775a02772e24e"
+    },
+    "format": "zip",
+    "architecture": null,
+    "local_path": "/Users/a488/Library/Application Support/Steam/steamapps/common/Balatro/Balatro.app/Contents/Resources/Balatro.love"
+  },
+  "extraction_root": "/var/folders/7r/lp2jpb9905xck1v7qxlbk7f00000gn/T/rea-extracted-b62dfae3-a528-4377-8bfa-8a04726c6596",
+  "containment_verified": true,
+  "source_hashes": {
+    "functions/UI_definitions.lua": "e41dcdb24fb66faeb9e3809ea3e4252716d61836ef152677e39245a28fca6eb8",
+    "engine/ui.lua": "0aef0ac692471beb8dd9582daf973a875ff1033b65dbab015b10e0bc91150dcd",
+    "engine/sprite.lua": "c5e10ea7a91a57ea7a9389cbecae7504bcbf835645eb90fff669f5c3f4f803de",
+    "engine/moveable.lua": "84cb784637b125962d564e3070befc87b97fc155ee2214a371cce995d7bdfb21",
+    "engine/animatedsprite.lua": "f88fb4bb800c67fb311ba9a3a7fe0fed084491f4746f1f07a9ff6b33c10602c6",
+    "functions/misc_functions.lua": "c36ed54d8ab441be994a9afc5d38b8ac530f3b93995dfed424ec11f02e633198",
+    "resources/shaders/dissolve.fs": "f2187e221f35867b2a7f81a90f9af3081cc47de8a0a7f4b42d93476cd53d2075"
+  },
+  "findings_type": "REA 提取后沿 Lua 和 GLSL 调用链静态人工核对；不是 REA 自动行为结论或原游戏 GPU 追踪",
+  "findings": [
+    {
+      "claim": "盲注收藏同一 sprite 分两遍绘制：先阴影，后本体",
+      "location": "functions/UI_definitions.lua:3981-3985; engine/sprite.lua:162-167"
+    },
+    {
+      "claim": "阴影使用当前 VT.scale 乘 0.99；偏移按 shadow_parrallax 乘 0.05；绘制后还原，未改 VT.r",
+      "location": "engine/sprite.lua:73-122"
+    },
+    {
+      "claim": "阴影未指定 tilt_shadow，hovering 强制为 0；本体悬停为 3",
+      "location": "engine/sprite.lua:98; functions/UI_definitions.lua:4007"
+    },
+    {
+      "claim": "两遍 draw_self 调用相同 prep_draw，均应用 VT.r 与 VT.scale",
+      "location": "engine/animatedsprite.lua:60-74; functions/misc_functions.lua:792-802"
+    },
+    {
+      "claim": "收藏对象 role 的 scale_bond 为 Weak、r_bond 保持默认 Strong；平面旋转为 T.r 加父级 VT.r 和 juice.r，不走 move_r 的双倍 juice 分支",
+      "location": "engine/ui.lua:380-394; engine/moveable.lua:46-47,382-391,464-477"
+    },
+    {
+      "claim": "常驻旋转目标 0.02*sin(2*t+x)；悬停目标 scale 增加 0.05，juice 时长 0.4 秒",
+      "location": "engine/animatedsprite.lua:88-91; engine/moveable.lua:250-273,423-430"
+    },
+    {
+      "claim": "普通阴影颜色为黑色，alpha 为原图 alpha 的 0.3",
+      "location": "resources/shaders/dissolve.fs:17-18"
+    }
+  ],
+  "runtime_verification": "Godot 本项目悬停回归 failures=0；冻结时间后四角鼠标位置不改变阴影像素，阴影共享缩放和平面旋转",
+  "limitations": [
+    "Godot CanvasItem 透视适配和固定 120 Hz 递推不等于完整移植 LÖVE 渲染环境",
+    "只核对本机此版本盲注收藏；本轮未注入或修改原游戏进程"
+  ]
+}

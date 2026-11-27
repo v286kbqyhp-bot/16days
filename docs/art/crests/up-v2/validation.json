@@ -1,0 +1,11 @@
+{
+  "pxo_png_match": true,
+  "original_disc_alpha": true,
+  "rays_inside_disc_and_rim": true,
+  "letters_inside_rim": true,
+  "bevels_inside_front": true,
+  "single_pixel_outline": true,
+  "layer_count": 8,
+  "pxo_sha256": "9df3f43db352ad0abe60528b3dd266ee882e0a354df3282ab245c1773cdd17e7",
+  "visual_status": "background direction approved; dimensional letter appearance awaiting review"
+}

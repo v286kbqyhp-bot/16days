@@ -1,0 +1,80 @@
+{
+  "background_layers_identical_to_v2": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "7": true
+  },
+  "pxo_png_match": true,
+  "disc_alpha_unchanged": true,
+  "figure_stays_inside_disc_rim": true,
+  "layer_count": 10,
+  "all_10_layers_nonempty": true,
+  "pxo_sha256": "cd02c49a5dbb226358c14627869cd20e56ac0494553324c78dcc09de73d797ee",
+  "visual_status": "Author reviewed: 还凑合吧下一个纹章; retained while moving to next crest, no integration or release authorization",
+  "bottom_edge_correction_20261127": {
+    "crest": "sky",
+    "changed_pixels": [
+      [
+        20,
+        46
+      ],
+      [
+        21,
+        46
+      ],
+      [
+        22,
+        46
+      ],
+      [
+        23,
+        46
+      ],
+      [
+        24,
+        46
+      ],
+      [
+        25,
+        46
+      ],
+      [
+        26,
+        46
+      ],
+      [
+        27,
+        46
+      ]
+    ],
+    "alpha_unchanged": true,
+    "pxo_png_match": true,
+    "bottom_rim_color": "#07539d",
+    "pxo_sha256": "cd02c49a5dbb226358c14627869cd20e56ac0494553324c78dcc09de73d797ee"
+  },
+  "historical_checks_note": "Earlier comparisons describe the original draft; bottom-edge correction changes only x20..27 y46 in the final composite.",
+  "layer_ownership_audit": {
+    "crest": "sky",
+    "layers": [
+      "蔚蓝天空_保留v2",
+      "圆盘明暗边_保留v2",
+      "背后白云_保留v2",
+      "圣天使_象牙白双翼",
+      "圣天使_金色圆光",
+      "圣天使_飘动长袍",
+      "圣天使_面部与手",
+      "圣天使_赭金头发",
+      "圣天使_衣领与腰带",
+      "下方白云_保留v2"
+    ],
+    "rim_layer": "圆盘明暗边_保留v2",
+    "rim_index": 1,
+    "all_nonempty": true,
+    "outside_pixels": 0,
+    "decoration_rim_overlap": 0,
+    "bottom_owned_by_rim": true,
+    "pxo_png_match": true,
+    "pxo_sha256": "cd02c49a5dbb226358c14627869cd20e56ac0494553324c78dcc09de73d797ee"
+  }
+}

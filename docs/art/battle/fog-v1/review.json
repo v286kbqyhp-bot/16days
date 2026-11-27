@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-27",
+  "base_commit": "ecc5d0c7737fc6be7f6037d46a4a9483031256af",
+  "version_state": "本地未提交样片，视觉待作者审阅",
+  "renderer": "Godot 4.7.2 / macOS / OpenGL Compatibility / Apple M5",
+  "viewport_sizes": [
+    "1280x720",
+    "1440x900",
+    "1680x720",
+    "1366x768",
+    "960x540",
+    "1920x1080"
+  ],
+  "checks": {
+    "battle_scene_failures": 0,
+    "viewport_gui_failures": 0,
+    "gui_hover_per_size": 64,
+    "full_board_corners": true,
+    "outside_cell_rejected": true
+  },
+  "scope": "原贴图复用，连续土壤地面、地砖下侧沿裁切、世界边界迷雾、整数像素取景、GUI 点选适配",
+  "pending": [
+    "作者确认迷雾配色、遮蔽宽度、运动观感",
+    "Windows 与系统显示缩放实机检查"
+  ],
+  "sha256": {
+    "game/battle/battle_preview.gd": "74fcbdf25e24a30dfc76a55e826b5e09ec2ae4129f33a015a98e4e32a810ae58",
+    "game/battle/forest_battle_world.gd": "030cab9ec58926804598574e925edf7bf21249584333ff68d0074a2b1c612455",
+    "game/battle/forest_battle_data.gd": "018250d1c4607a060afc52dc8814fc053241c4f3abe25fc0da1890d4289d1432",
+    "game/battle/battle_pixelate.gdshader": "82ac799c9962f8e9d3d68d746820077ce680291437607a3cc2384ee3cbfb7d8f",
+    "game/battle/battle_fog.gdshader": "5f1d617a317a5aba2dd726003f17bfaf32dca0b0260fe6d0f0b30b375fd9c9b2",
+    "game/battle/battle_lit_pixel.gdshader": "88cdd2b1dae9c3a7eb2563d4ba34ee4b541c5d36b1caefce6cca7057745ffdda",
+    "game/battle/battle_preview.tscn": "ad64a9af33be4735fe1f83bebb7ca92ef26a7fe860f14a6fb66e1df4e7e8428b",
+    "game/battle/forest_battle_world.tscn": "1c63f69204a8929d9c8ef8e03d6351a860c0774b73e4dac457988a4242f017e0",
+    "tests/battle_scene_test.gd": "160b6caf471c136d18db560eea58c4bb11da3d89ca257d80df1ab3fa0a636d43",
+    "tests/battle_viewport_test.gd": "19f542a004fb29b24c4f7182009f3ee46efb49401585adf67ad21172f480fe43"
+  }
+}

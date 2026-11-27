@@ -1,0 +1,18 @@
+# 战场美术第三方 CC0 素材与原创资产声明
+
+1. Pixel Pine Tree Assets (10 Pack)
+   - 作者：pistachio
+   - 来源：https://opengameart.org/content/pixel-pine-tree-assets-10-pack
+   - 许可：CC0 1.0 Universal (Public Domain Dedication) — https://creativecommons.org/publicdomain/zero/1.0/
+   - 使用范围与修改情况：用于「寒林前哨」战场外围针叶松、覆雪松、枯松与树桩（`tree_pine_*`, `tree_dead_*`, `prop_stump_*`），统一调整为北境冷青松色板，并补绘接地暗影与配对 OpenGL 切线空间法线贴图。
+
+2. Kenney Tiny Dungeon & Tiny Town (2D Pixel Packs)
+   - 作者：Kenney Vleugels (Kenney.nl)
+   - 来源：https://kenney.nl/assets/tiny-dungeon , https://kenney.nl/assets/tiny-town
+   - 许可：CC0 1.0 Universal (Public Domain Dedication) — https://creativecommons.org/publicdomain/zero/1.0/
+   - 使用范围与修改情况：用于地图额外宝箱（`prop_chest_closed`, `prop_chest_open`）、林间灌木/蘑菇/原木/木桩（`prop_bush`, `prop_mushrooms`, `prop_logs`, `prop_fence_post`）及三名守望小队队员的基础像素小人与武器局部（`unit_warden_sword`, `unit_warden_bow`, `unit_warden_staff`），叠加原创守望披风、占格环、石座及配对 OpenGL 法线贴图。
+
+3. 16days 战场原创像素资产
+   - 作者：16days 开发组（AI 辅助脚本绘制 + Pixelorama v8 分层原件）
+   - 许可：随项目原创非代码资产采用 CC BY 4.0（对齐 docs/requirements.md）
+   - 包含：640x360 北境寒林背景（`bg_cold_forest`）、8x8 剖面沙盘岩层台基（`board_cliff_base`）、全部 2:1 等轴地形块（普通地、草地、点燃草地、冰溪水地、完好/受损花岗巨石、沙地、地洞）、水晶采集器三态（工作中/完成/损毁）、整晶资源图标（`icon_crystal_whole`）、掠夺地精、地精钻出裂隙预告标记、守望火盆与格内火焰帧。

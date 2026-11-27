@@ -1,0 +1,72 @@
+{
+  "only_ray_layer_changed": true,
+  "changed_composite_pixels": 457,
+  "before": "#e9ac35",
+  "after": "#ec683c",
+  "all_other_layers_identical_to_v2": true,
+  "visual_status": "Author accepted 可以哦 and moved to clear-eye crest; no release authorization",
+  "bottom_edge_correction_20261127": {
+    "crest": "up",
+    "changed_pixels": [
+      [
+        20,
+        46
+      ],
+      [
+        21,
+        46
+      ],
+      [
+        22,
+        46
+      ],
+      [
+        23,
+        46
+      ],
+      [
+        24,
+        46
+      ],
+      [
+        25,
+        46
+      ],
+      [
+        26,
+        46
+      ],
+      [
+        27,
+        46
+      ]
+    ],
+    "alpha_unchanged": true,
+    "pxo_png_match": true,
+    "bottom_rim_color": "#76512a",
+    "pxo_sha256": "2a2a96ab62d12ba54758848c85d1c7a21e8c076dfc8fd8b9917a9e070310f4e8"
+  },
+  "historical_checks_note": "Earlier comparisons describe the original draft; bottom-edge correction changes only x20..27 y46 in the final composite.",
+  "layer_ownership_audit": {
+    "crest": "up",
+    "layers": [
+      "圆盘_明黄底色",
+      "背景_橙红色放射纹",
+      "圆盘_配套高光阴影",
+      "UP_单像素外描边",
+      "UP_右下侧面厚度",
+      "UP_红色正面",
+      "UP_倒角暗部",
+      "UP_左上倒角高光"
+    ],
+    "rim_layer": "圆盘_配套高光阴影",
+    "rim_index": 2,
+    "all_nonempty": true,
+    "outside_pixels": 0,
+    "decoration_rim_overlap": 0,
+    "bottom_owned_by_rim": true,
+    "pxo_png_match": true,
+    "pxo_sha256": "2a2a96ab62d12ba54758848c85d1c7a21e8c076dfc8fd8b9917a9e070310f4e8"
+  },
+  "pxo_sha256": "2a2a96ab62d12ba54758848c85d1c7a21e8c076dfc8fd8b9917a9e070310f4e8"
+}

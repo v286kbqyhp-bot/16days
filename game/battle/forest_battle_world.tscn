@@ -1,0 +1,356 @@
+[gd_scene load_steps=50 format=3]
+
+[ext_resource type="Script" path="res://battle/forest_battle_world.gd" id="1_script"]
+[ext_resource type="Shader" path="res://battle/battle_lit_pixel.gdshader" id="2_lit"]
+[ext_resource type="Shader" path="res://battle/battle_pixelate.gdshader" id="3_pix"]
+[ext_resource type="Texture2D" path="res://battle/art/bg_cold_forest_albedo.png" id="4_bg_a"]
+[ext_resource type="Texture2D" path="res://battle/art/bg_cold_forest_normal.png" id="5_bg_n"]
+[ext_resource type="Texture2D" path="res://battle/art/board_cliff_base_albedo.png" id="6_cliff_a"]
+[ext_resource type="Texture2D" path="res://battle/art/board_cliff_base_normal.png" id="7_cliff_n"]
+[ext_resource type="Texture2D" path="res://battle/art/tree_pine_tall_albedo.png" id="8_ptall_a"]
+[ext_resource type="Texture2D" path="res://battle/art/tree_pine_tall_normal.png" id="9_ptall_n"]
+[ext_resource type="Texture2D" path="res://battle/art/tree_pine_spruce_albedo.png" id="10_pspruce_a"]
+[ext_resource type="Texture2D" path="res://battle/art/tree_pine_spruce_normal.png" id="11_pspruce_n"]
+[ext_resource type="Texture2D" path="res://battle/art/tree_pine_mid_albedo.png" id="12_pmid_a"]
+[ext_resource type="Texture2D" path="res://battle/art/tree_pine_mid_normal.png" id="13_pmid_n"]
+[ext_resource type="Texture2D" path="res://battle/art/tree_pine_frost_tall_albedo.png" id="14_pftall_a"]
+[ext_resource type="Texture2D" path="res://battle/art/tree_pine_frost_tall_normal.png" id="15_pftall_n"]
+[ext_resource type="Texture2D" path="res://battle/art/tree_pine_frost_wide_albedo.png" id="16_pfwide_a"]
+[ext_resource type="Texture2D" path="res://battle/art/tree_pine_frost_wide_normal.png" id="17_pfwide_n"]
+[ext_resource type="Texture2D" path="res://battle/art/tree_dead_moss_albedo.png" id="18_dmoss_a"]
+[ext_resource type="Texture2D" path="res://battle/art/tree_dead_moss_normal.png" id="19_dmoss_n"]
+[ext_resource type="Texture2D" path="res://battle/art/tree_dead_snag_albedo.png" id="34_dsnag_a"]
+[ext_resource type="Texture2D" path="res://battle/art/tree_dead_snag_normal.png" id="35_dsnag_n"]
+[ext_resource type="Texture2D" path="res://battle/art/prop_stump_large_albedo.png" id="20_stump_a"]
+[ext_resource type="Texture2D" path="res://battle/art/prop_stump_large_normal.png" id="21_stump_n"]
+[ext_resource type="Texture2D" path="res://battle/art/prop_stump_small_albedo.png" id="22_stumps_a"]
+[ext_resource type="Texture2D" path="res://battle/art/prop_stump_small_normal.png" id="23_stumps_n"]
+[ext_resource type="Texture2D" path="res://battle/art/prop_bush_albedo.png" id="24_bush_a"]
+[ext_resource type="Texture2D" path="res://battle/art/prop_bush_normal.png" id="25_bush_n"]
+[ext_resource type="Texture2D" path="res://battle/art/prop_mushrooms_albedo.png" id="26_mush_a"]
+[ext_resource type="Texture2D" path="res://battle/art/prop_mushrooms_normal.png" id="27_mush_n"]
+[ext_resource type="Texture2D" path="res://battle/art/prop_logs_albedo.png" id="28_logs_a"]
+[ext_resource type="Texture2D" path="res://battle/art/prop_logs_normal.png" id="29_logs_n"]
+[ext_resource type="Texture2D" path="res://battle/art/prop_fence_post_albedo.png" id="30_fence_a"]
+[ext_resource type="Texture2D" path="res://battle/art/prop_fence_post_normal.png" id="31_fence_n"]
+[ext_resource type="Texture2D" path="res://battle/art/prop_watch_brazier_albedo.png" id="32_braz_a"]
+[ext_resource type="Texture2D" path="res://battle/art/prop_watch_brazier_normal.png" id="33_braz_n"]
+
+[sub_resource type="ShaderMaterial" id="Mat_env"]
+shader = ExtResource("2_lit")
+shader_parameter/normal_strength = 1.2
+shader_parameter/light_bands = 4
+shader_parameter/specular_strength = 0.05
+shader_parameter/specular_threshold = 0.91
+shader_parameter/wrap_amount = 0.28
+
+[sub_resource type="ShaderMaterial" id="Mat_pixelate"]
+shader = ExtResource("3_pix")
+shader_parameter/pixel_size = 1.0
+shader_parameter/color_levels = 64
+shader_parameter/vignette_strength = 0.16
+
+[sub_resource type="CanvasTexture" id="CT_bg"]
+diffuse_texture = ExtResource("4_bg_a")
+normal_texture = ExtResource("5_bg_n")
+
+[sub_resource type="CanvasTexture" id="CT_cliff"]
+diffuse_texture = ExtResource("6_cliff_a")
+normal_texture = ExtResource("7_cliff_n")
+
+[sub_resource type="CanvasTexture" id="CT_pine_tall"]
+diffuse_texture = ExtResource("8_ptall_a")
+normal_texture = ExtResource("9_ptall_n")
+
+[sub_resource type="CanvasTexture" id="CT_pine_spruce"]
+diffuse_texture = ExtResource("10_pspruce_a")
+normal_texture = ExtResource("11_pspruce_n")
+
+[sub_resource type="CanvasTexture" id="CT_pine_mid"]
+diffuse_texture = ExtResource("12_pmid_a")
+normal_texture = ExtResource("13_pmid_n")
+
+[sub_resource type="CanvasTexture" id="CT_frost_tall"]
+diffuse_texture = ExtResource("14_pftall_a")
+normal_texture = ExtResource("15_pftall_n")
+
+[sub_resource type="CanvasTexture" id="CT_frost_wide"]
+diffuse_texture = ExtResource("16_pfwide_a")
+normal_texture = ExtResource("17_pfwide_n")
+
+[sub_resource type="CanvasTexture" id="CT_dead_moss"]
+diffuse_texture = ExtResource("18_dmoss_a")
+normal_texture = ExtResource("19_dmoss_n")
+
+[sub_resource type="CanvasTexture" id="CT_dead_snag"]
+diffuse_texture = ExtResource("34_dsnag_a")
+normal_texture = ExtResource("35_dsnag_n")
+
+[sub_resource type="CanvasTexture" id="CT_stump_large"]
+diffuse_texture = ExtResource("20_stump_a")
+normal_texture = ExtResource("21_stump_n")
+
+[sub_resource type="CanvasTexture" id="CT_stump_small"]
+diffuse_texture = ExtResource("22_stumps_a")
+normal_texture = ExtResource("23_stumps_n")
+
+[sub_resource type="CanvasTexture" id="CT_bush"]
+diffuse_texture = ExtResource("24_bush_a")
+normal_texture = ExtResource("25_bush_n")
+
+[sub_resource type="CanvasTexture" id="CT_mushrooms"]
+diffuse_texture = ExtResource("26_mush_a")
+normal_texture = ExtResource("27_mush_n")
+
+[sub_resource type="CanvasTexture" id="CT_logs"]
+diffuse_texture = ExtResource("28_logs_a")
+normal_texture = ExtResource("29_logs_n")
+
+[sub_resource type="CanvasTexture" id="CT_fence"]
+diffuse_texture = ExtResource("30_fence_a")
+normal_texture = ExtResource("31_fence_n")
+
+[sub_resource type="CanvasTexture" id="CT_brazier"]
+diffuse_texture = ExtResource("32_braz_a")
+normal_texture = ExtResource("33_braz_n")
+
+[sub_resource type="Gradient" id="Grad_warm"]
+offsets = PackedFloat32Array(0, 0.34, 0.72, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 0.92, 0.78, 0.62, 1, 0.84, 0.62, 0.22, 1, 0.76, 0.5, 0)
+
+[sub_resource type="GradientTexture2D" id="Tex_light"]
+gradient = SubResource("Grad_warm")
+width = 512
+height = 512
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[node name="ForestBattleWorld" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_script")
+
+[node name="Backdrop" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("Mat_env")
+centered = false
+texture = SubResource("CT_bg")
+
+[node name="BackWoods" type="Node2D" parent="."]
+
+[node name="PineNW_Outer" type="Sprite2D" parent="BackWoods"]
+material = SubResource("Mat_env")
+position = Vector2(34, 54)
+texture = SubResource("CT_pine_spruce")
+
+[node name="PineNW_Far" type="Sprite2D" parent="BackWoods"]
+material = SubResource("Mat_env")
+position = Vector2(194, 48)
+texture = SubResource("CT_frost_tall")
+
+[node name="PineNW_Mid" type="Sprite2D" parent="BackWoods"]
+material = SubResource("Mat_env")
+position = Vector2(136, 68)
+texture = SubResource("CT_pine_spruce")
+
+[node name="DeadPineNW" type="Sprite2D" parent="BackWoods"]
+material = SubResource("Mat_env")
+position = Vector2(88, 84)
+texture = SubResource("CT_dead_moss")
+
+[node name="PineNorthGapL" type="Sprite2D" parent="BackWoods"]
+material = SubResource("Mat_env")
+position = Vector2(248, 36)
+texture = SubResource("CT_pine_mid")
+
+[node name="PineNorthGapR" type="Sprite2D" parent="BackWoods"]
+material = SubResource("Mat_env")
+position = Vector2(394, 36)
+flip_h = true
+texture = SubResource("CT_pine_mid")
+
+[node name="PineNE_Far" type="Sprite2D" parent="BackWoods"]
+material = SubResource("Mat_env")
+position = Vector2(448, 48)
+flip_h = true
+texture = SubResource("CT_frost_tall")
+
+[node name="PineNE_Mid" type="Sprite2D" parent="BackWoods"]
+material = SubResource("Mat_env")
+position = Vector2(506, 68)
+texture = SubResource("CT_pine_spruce")
+
+[node name="PineNE_Outer" type="Sprite2D" parent="BackWoods"]
+material = SubResource("Mat_env")
+position = Vector2(604, 56)
+flip_h = true
+texture = SubResource("CT_pine_spruce")
+
+[node name="PineEastFlank" type="Sprite2D" parent="BackWoods"]
+material = SubResource("Mat_env")
+position = Vector2(562, 108)
+texture = SubResource("CT_frost_wide")
+
+[node name="DeadSnagNE" type="Sprite2D" parent="BackWoods"]
+material = SubResource("Mat_env")
+position = Vector2(616, 122)
+texture = SubResource("CT_dead_snag")
+
+[node name="PineWestFlank" type="Sprite2D" parent="BackWoods"]
+material = SubResource("Mat_env")
+position = Vector2(44, 128)
+texture = SubResource("CT_frost_wide")
+
+[node name="StumpNW" type="Sprite2D" parent="BackWoods"]
+material = SubResource("Mat_env")
+position = Vector2(168, 108)
+texture = SubResource("CT_stump_small")
+
+[node name="LogsNW" type="Sprite2D" parent="BackWoods"]
+material = SubResource("Mat_env")
+position = Vector2(118, 134)
+texture = SubResource("CT_logs")
+
+[node name="FenceNW" type="Sprite2D" parent="BackWoods"]
+material = SubResource("Mat_env")
+position = Vector2(228, 84)
+texture = SubResource("CT_fence")
+
+[node name="FenceNE" type="Sprite2D" parent="BackWoods"]
+material = SubResource("Mat_env")
+position = Vector2(414, 84)
+flip_h = true
+texture = SubResource("CT_fence")
+
+[node name="BrazierNW" type="Sprite2D" parent="BackWoods"]
+material = SubResource("Mat_env")
+position = Vector2(104, 152)
+texture = SubResource("CT_brazier")
+
+[node name="BrazierSE" type="Sprite2D" parent="BackWoods"]
+material = SubResource("Mat_env")
+position = Vector2(536, 152)
+texture = SubResource("CT_brazier")
+
+[node name="BushNE" type="Sprite2D" parent="BackWoods"]
+material = SubResource("Mat_env")
+position = Vector2(520, 128)
+texture = SubResource("CT_bush")
+
+[node name="BoardCliffBase" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("Mat_env")
+position = Vector2(112, 62)
+centered = false
+texture = SubResource("CT_cliff")
+
+[node name="BoardTiles" type="Node2D" parent="."]
+
+[node name="BoardEntities" type="Node2D" parent="."]
+
+[node name="ForeWoods" type="Node2D" parent="."]
+z_index = 40
+
+[node name="PineSW_Edge" type="Sprite2D" parent="ForeWoods"]
+material = SubResource("Mat_env")
+position = Vector2(32, 232)
+texture = SubResource("CT_pine_tall")
+
+[node name="PineSW_Lower" type="Sprite2D" parent="ForeWoods"]
+material = SubResource("Mat_env")
+position = Vector2(82, 272)
+texture = SubResource("CT_frost_tall")
+
+[node name="PineSW_Bottom" type="Sprite2D" parent="ForeWoods"]
+material = SubResource("Mat_env")
+position = Vector2(142, 314)
+texture = SubResource("CT_pine_mid")
+
+[node name="StumpSW" type="Sprite2D" parent="ForeWoods"]
+material = SubResource("Mat_env")
+position = Vector2(126, 240)
+texture = SubResource("CT_stump_large")
+
+[node name="MushroomsSW" type="Sprite2D" parent="ForeWoods"]
+material = SubResource("Mat_env")
+position = Vector2(164, 256)
+texture = SubResource("CT_mushrooms")
+
+[node name="BushSW" type="Sprite2D" parent="ForeWoods"]
+material = SubResource("Mat_env")
+position = Vector2(212, 278)
+texture = SubResource("CT_bush")
+
+[node name="LogsSouth" type="Sprite2D" parent="ForeWoods"]
+material = SubResource("Mat_env")
+position = Vector2(264, 292)
+texture = SubResource("CT_logs")
+
+[node name="StumpSouthR" type="Sprite2D" parent="ForeWoods"]
+material = SubResource("Mat_env")
+position = Vector2(382, 290)
+texture = SubResource("CT_stump_small")
+
+[node name="BushSE_Low" type="Sprite2D" parent="ForeWoods"]
+material = SubResource("Mat_env")
+position = Vector2(428, 278)
+texture = SubResource("CT_bush")
+
+[node name="LogsSE" type="Sprite2D" parent="ForeWoods"]
+material = SubResource("Mat_env")
+position = Vector2(474, 260)
+texture = SubResource("CT_logs")
+
+[node name="StumpSE" type="Sprite2D" parent="ForeWoods"]
+material = SubResource("Mat_env")
+position = Vector2(514, 242)
+flip_h = true
+texture = SubResource("CT_stump_large")
+
+[node name="PineSE_Bottom" type="Sprite2D" parent="ForeWoods"]
+material = SubResource("Mat_env")
+position = Vector2(498, 314)
+flip_h = true
+texture = SubResource("CT_pine_mid")
+
+[node name="PineSE_Lower" type="Sprite2D" parent="ForeWoods"]
+material = SubResource("Mat_env")
+position = Vector2(558, 272)
+flip_h = true
+texture = SubResource("CT_frost_tall")
+
+[node name="PineSE_Edge" type="Sprite2D" parent="ForeWoods"]
+material = SubResource("Mat_env")
+position = Vector2(608, 230)
+flip_h = true
+texture = SubResource("CT_pine_tall")
+
+[node name="AmbientMoonlight" type="CanvasModulate" parent="."]
+color = Color(0.68, 0.76, 0.84, 1)
+
+[node name="BoardMoonKeyLight" type="PointLight2D" parent="."]
+position = Vector2(320, 158)
+color = Color(0.86, 0.94, 1, 1)
+energy = 0.45
+texture = SubResource("Tex_light")
+texture_scale = 1.85
+height = 110.0
+
+[node name="BrazierLightNW" type="PointLight2D" parent="."]
+position = Vector2(104, 144)
+color = Color(1, 0.72, 0.42, 1)
+energy = 0.72
+texture = SubResource("Tex_light")
+texture_scale = 0.88
+height = 46.0
+
+[node name="BrazierLightNE" type="PointLight2D" parent="."]
+position = Vector2(536, 144)
+color = Color(1, 0.72, 0.42, 1)
+energy = 0.72
+texture = SubResource("Tex_light")
+texture_scale = 0.88
+height = 46.0
+
+[node name="DynamicLights" type="Node2D" parent="."]
+

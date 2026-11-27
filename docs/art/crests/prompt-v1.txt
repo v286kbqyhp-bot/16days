@@ -1,0 +1,29 @@
+Use case: stylized-concept
+Asset type: one art-direction proposal contact sheet for a Chinese medieval-fantasy single-player tactical game; not a production sprite atlas.
+Primary request: Design a coherent collection of exactly 17 different equipment crests, based on the existing gameplay roster below. These are wearable metal heraldic badges, not loose rune stones, potion bottles, cards or weapons.
+Style: carefully drawn 2D PIXEL ART, visibly square pixels and stepped outlines, restrained 32x32-style icon complexity enlarged with nearest-neighbor appearance. No antialiasing on icons, no smooth painted rendering, no 3D renders, no excessive tiny ornamental noise. Each badge has a strong silhouette and one legible central motif. Warm aged metal fits a wooden medieval shop; dark enamel interiors; a very restrained accent color per crest.
+Composition: beautiful clean landscape review board, 6 columns by 3 rows, first 17 cells populated in strict reading order; last cell is a small two-line legend, NOT another icon. Dark desaturated charcoal background, generous even spacing, consistent badge sizes. Heading exactly "纹章设计 · 第一版". Subtitle exactly "1 枚普通 · 16 枚传奇". Each icon has its short exact Chinese name beneath it, clear readable type. Do not include ability text, numbers, invented names, pricing or extra interface.
+Shared visual grammar: ordinary badge has simple iron edging and a plain shield silhouette; legendary badges have a distinct warm brass double rim with a small diamond at the top. Family resemblance, but silhouettes and central motifs differ enough to identify without color alone. Highlights are sparse hard pixel clusters. Avoid external glow that weakens silhouettes.
+Exactly these 17, left to right:
+Row 1:
+1 普通 — simple weathered iron shield, dark neutral inset, one plain vertical raised metal bar, no magic, deliberately humble.
+2 天空 — open silver wings flanking a pale blue central feather, brass-rimmed sky-blue heraldic badge. Represents flying.
+3 守望者 — compact watchtower inside a broad protective shield, a pale cyan single protective arc. Protects against the first hit.
+4 老兵 — aged bronze helmet with a single prominent chevron and a few wear marks; no skull. Represents combat experience.
+5 清风 — three clean pale mint curved wind cuts crossing a dark teal inset. Read as clear wind, not an eye.
+6 先锋 — bold upward spearhead with two short forward chevrons, amber inset. First-turn movement.
+Row 2:
+7 奇袭 — diagonal dark dagger emerging behind a small crescent edge, purple-black inset. Ambush deployment.
+8 游击 — one bent return arrow curving around a small blade, green inset. Strike then move, clear visual distinction from先锋.
+9 疾影 — slim split silver silhouette passing between two narrow vertical bars, indigo inset. Passing through enemies.
+10 重炮 — TWO short broad cannon muzzles side by side on a squat dark navy badge. Double attack.
+11 重甲 — layered broad iron breastplate, steel-blue dark inset, thick squared shoulder silhouette. Damage reduction, distinct from守望者.
+12 震荡 — small central ivory healing cross surrounded by four outward-facing wave wedges, turquoise inset. Healing pushes neighbors.
+Row 3:
+13 狂猎 — three bold diagonal ivory claw slashes over dark red, angular fanged outer profile. Sacrifice self healing for claw strike.
+14 熔岩 — solid black volcanic heart/rock with three orange-red fissures inside brass border, NO floating fire effects. Health and fire immunity.
+15 狂傲 — high upright crown with a single bright ruby center, deep burgundy inset. Full-health aggression.
+16 抚慰 — two small cupped hands holding one pale green sprout, rounded green shield. Neighbor healing.
+17 嗜血 — one crimson droplet between two inward curved silver fangs, burgundy-black inset. Killing fuels the next attack, distinct from claw slashes.
+18 no icon; only small legend text "铁边：普通" and "黄铜双边：传奇".
+Constraints: all seventeen have consistent pixel density; labels must correspond exactly. Icon art must stay readable at small size. No dramatic scene, no people, no mockup background props, no watermarks. This is an original visual proposal, not a claim of final engine-ready art.

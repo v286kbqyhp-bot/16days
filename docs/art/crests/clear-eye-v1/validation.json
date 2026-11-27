@@ -1,0 +1,75 @@
+{
+  "pxo_png_match": true,
+  "original_disc_alpha": true,
+  "content_inside_rim": true,
+  "front_wind_avoids_hands_and_face": true,
+  "all_layers_nonempty": true,
+  "all_layers_visible": true,
+  "layer_count": 9,
+  "pxo_sha256": "76a0b1c9fb79dda328c912af5bd97eaa910c455e48b4da5ff3960de7b1dbec8e",
+  "visual_status": "Author accepted 可以下一个 on 2026-11-27 and moved to the next crest; no formal integration or release authorization",
+  "bottom_edge_correction_20261127": {
+    "crest": "clear_eye",
+    "changed_pixels": [
+      [
+        20,
+        46
+      ],
+      [
+        21,
+        46
+      ],
+      [
+        22,
+        46
+      ],
+      [
+        23,
+        46
+      ],
+      [
+        24,
+        46
+      ],
+      [
+        25,
+        46
+      ],
+      [
+        26,
+        46
+      ],
+      [
+        27,
+        46
+      ]
+    ],
+    "alpha_unchanged": true,
+    "pxo_png_match": true,
+    "bottom_rim_color": "#294c46",
+    "pxo_sha256": "76a0b1c9fb79dda328c912af5bd97eaa910c455e48b4da5ff3960de7b1dbec8e"
+  },
+  "historical_checks_note": "Earlier comparisons describe the original draft; bottom-edge correction changes only x20..27 y46 in the final composite.",
+  "layer_ownership_audit": {
+    "crest": "clear_eye",
+    "layers": [
+      "圆盘_青绿底色",
+      "圆盘_高光阴影",
+      "风_后方环绕",
+      "小人_躯干与双腿",
+      "小人_脸与颈",
+      "小人_头发与五官",
+      "小人_收拢双臂",
+      "小人_胸前结印双手",
+      "风_前景掠过"
+    ],
+    "rim_layer": "圆盘_高光阴影",
+    "rim_index": 1,
+    "all_nonempty": true,
+    "outside_pixels": 0,
+    "decoration_rim_overlap": 0,
+    "bottom_owned_by_rim": true,
+    "pxo_png_match": true,
+    "pxo_sha256": "76a0b1c9fb79dda328c912af5bd97eaa910c455e48b4da5ff3960de7b1dbec8e"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "layer_count": 7,
+  "all_layers_visible_normal_opaque": true,
+  "pxo_png_match": true,
+  "disc_alpha_unchanged": true,
+  "background_uniform_black": true,
+  "rim_geometry_unchanged": true,
+  "shield_inside_disc_rim": true,
+  "details_inside_shield": true,
+  "all_layers_nonempty": true,
+  "pxo_sha256": "ecca22548208df3b525ab8f621c1d4579beaa8df6bb13446255027a07088a850",
+  "visual_status": "black background and obsidian shield draft awaiting author review"
+}

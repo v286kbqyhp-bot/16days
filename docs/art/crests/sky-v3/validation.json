@@ -1,0 +1,15 @@
+{
+  "layers": 8,
+  "background_layers_identical_to_v2": [
+    0,
+    1,
+    2,
+    7
+  ],
+  "pxo_png_match": true,
+  "disc_alpha_unchanged": true,
+  "wings_symmetric": true,
+  "figure_stays_inside_disc_rim": true,
+  "pxo_sha256": "5c618d036f6663f8c1e7943a901ea0af83a1637c2bab3aefe1af2f86a24a61d9",
+  "visual_status": "flying angel draft awaiting author review"
+}

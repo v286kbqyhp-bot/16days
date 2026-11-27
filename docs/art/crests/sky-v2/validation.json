@@ -1,0 +1,11 @@
+{
+  "color_layers": 8,
+  "pxo_png_match": true,
+  "transparent_outline_matches_approved_disc": true,
+  "art_layers_exclude_rim_and_transparent_background": true,
+  "common_source_sha256": "722bd2100331d20e33583592d98f5a9bf7d070f2864e1328aebe23b9d8e5fe38",
+  "normal_maps": "not made; wait for visual approval",
+  "review_status": "awaiting author review",
+  "current_color_pxo_sha256": "4dd0280a2106dde484a56cea5c615a39c100fc260c3c107f8fc9b169b590f28a",
+  "opened_in_pixelorama": true
+}
