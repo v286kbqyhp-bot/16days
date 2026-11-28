@@ -31,17 +31,17 @@ void fragment(){
   float cap=.84+noise(vec2(s/57.,t*.035+edge_seed))*.12;
   float dissolve=1.-smoothstep(cap-.24,cap,h);
   float body=(.14+.10*cloud)*dissolve;
-  // 每24px一候选区，独立5.5–9.5秒周期；多数周期不发射。
+  // 每24px一候选区，独立4.5–8秒周期；约48%的周期发射。
   float slot=floor(s/24.);
   float base=slot+edge_seed*31.;
-  float period=5.5+hash(base+4.)*4.;
+  float period=4.5+hash(base+4.)*3.5;
   float clock=t+hash(base+9.)*period;
   float cycle=floor(clock/period);
   float age=mod(clock,period);
   float seed=hash(base+cycle*43.);
   float center=(slot+.18+hash(base+cycle*17.+7.)*.64)*24.;
-  float event_on=step(.55,seed)*(1.-step(.95,age));
-  float progress=age/.80;
+  float event_on=step(.52,seed)*(1.-step(.82,age));
+  float progress=age/.68;
   float crossbeam=exp(-pow((s-center)/.85,2.));
   float beamglow=exp(-pow((s-center)/2.0,2.));
   float tail=smoothstep(progress-.5,progress-.12,h)*(1.-smoothstep(progress,progress+.07,h));
