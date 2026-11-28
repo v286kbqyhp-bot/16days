@@ -2,10 +2,8 @@
 extends Node2D
 ## 独立地景；无玩法占位物、地形物件、水晶、角色或战斗 UI。
 ## 光幕高度为原生像素；显示按当前整数倍率放大。
-@export_range(4.0,24.0,1.0) var boundary_rear_height := 22.0
-@export_range(2.0,16.0,1.0) var boundary_front_height := 9.0
-@export_range(0.0,1.0,0.01) var boundary_rear_strength := 0.85
-@export_range(0.0,1.0,0.01) var boundary_front_strength := 0.28
+@export_range(4.0,30.0,1.0) var boundary_height := 22.0
+@export_range(0.0,1.0,0.01) var boundary_strength := 0.82
 func _ready() -> void:
 	var ground := Polygon2D.new()
 	ground.name = "ContinuousGround"
@@ -102,8 +100,8 @@ func _build_laser_boundary() -> void:
 		var a := corners[i]
 		var b := corners[(i+1)%4]
 		var is_front := i in [1,2]
-		var strength := boundary_front_strength if is_front else boundary_rear_strength
-		var height := boundary_front_height if is_front else boundary_rear_height
+		var strength := boundary_strength
+		var height := boundary_height
 		var layer := front if is_front else rear
 		var wall := Polygon2D.new()
 		wall.name = "Curtain%d" % i
@@ -111,11 +109,12 @@ func _build_laser_boundary() -> void:
 		wall.polygon = PackedVector2Array([a,b,b-Vector2(0,height),a-Vector2(0,height)])
 		wall.uv = PackedVector2Array([Vector2(0,1),Vector2(1,1),Vector2(1,0),Vector2(0,0)])
 		wall.material = _laser_material(strength,false,a.distance_to(b),height)
+		wall.material.set_shader_parameter("edge_seed",float(i))
 		layer.add_child(wall)
 		var halo := Polygon2D.new()
 		halo.name = "GroundGlow%d" % i
 		halo.texture = white
-		var normal := (b-a).normalized().orthogonal()*2.5
+		var normal := (b-a).normalized().orthogonal()*4.0
 		halo.polygon = PackedVector2Array([a-normal,b-normal,b+normal,a+normal])
 		halo.uv = PackedVector2Array([Vector2(0,0),Vector2(1,0),Vector2(1,1),Vector2(0,1)])
 		halo.material = _laser_material(strength,true,a.distance_to(b),height)

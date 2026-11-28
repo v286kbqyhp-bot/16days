@@ -20,10 +20,11 @@ func _run() -> void:
 		push_error("Boundary scene failed to initialize")
 		quit(1)
 		return
-	assert(world.boundary_front_strength < world.boundary_rear_strength)
-	assert(world.boundary_front_height < world.boundary_rear_height)
+	for layer in [rear,front]:
+		for polygon in layer.get_children():
+			assert(is_equal_approx(polygon.material.get_shader_parameter("strength"),world.boundary_strength))
 	assert(world.get_node("ExteriorGrass").get_child_count()==0)
-	var folder := ProjectSettings.globalize_path("res://../docs/art/battle/boundary-cc0/laser-v11")
+	var folder := ProjectSettings.globalize_path("res://../docs/art/battle/boundary-cc0/laser-v12")
 	DirAccess.make_dir_recursive_absolute(folder)
 	var animate := "--animate" in OS.get_cmdline_user_args()
 	var frame_count := 24 if animate else 1
@@ -38,5 +39,5 @@ func _run() -> void:
 		if error != OK:
 			quit(error)
 			return
-	print("Boundary capture passed: ",frame_count," frame(s), rear/front and empty grass verified")
+	print("Boundary capture passed: ",frame_count," frame(s), equal four sides and empty grass verified")
 	quit(0)
