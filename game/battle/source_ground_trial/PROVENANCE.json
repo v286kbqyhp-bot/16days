@@ -1,0 +1,50 @@
+{
+  "local_visual_trial_only": true,
+  "source_game": "Order of the Sinking Star",
+  "build": "26825502",
+  "method": "BC3 decoded base color, BOX 128x128, contrast and RGB multiply; not original game shading",
+  "assets": [
+    {
+      "source": "C:\\Users\\yzj\\Documents\\ChatGPT\\开源游戏大赛项目\\research\\sinking-star\\TER_GRND_Forest_Dirt_B-RGB.png",
+      "sha256": "c8a93039f1720af5e6691cbf59bb38adf4cda7e229f7bc6af4834b8fcd862d03",
+      "output": "dirt.png",
+      "size": [
+        128,
+        128
+      ],
+      "contrast": 1.3,
+      "RGB_multiplier": [
+        0.76,
+        0.73,
+        0.65
+      ]
+    },
+    {
+      "source": "C:\\Users\\yzj\\Documents\\ChatGPT\\开源游戏大赛项目\\research\\sinking-star\\TER_GRND_Grass_A-DIFFR-RGB.png",
+      "sha256": "ae077cfc10f733def99962699320741f489ee956948e6be209c707ae186817e8",
+      "output": "grass.png",
+      "size": [
+        128,
+        128
+      ],
+      "contrast": 1.3,
+      "RGB_multiplier": [
+        0.51,
+        0.64,
+        0.4
+      ]
+    }
+  ],
+  "mixed_trial": {
+    "stone_source": "ANCI_Stone_Tile_Simple_A-diffuse.texture",
+    "stone_decoded_sha256": "4598e553a9bc3ffa96196302877e85ad21006bafd6f84e1041981283a3f054ff",
+    "stone_contrast": 1.2,
+    "stone_RGB_multiplier": [
+      0.61,
+      0.6,
+      0.52
+    ],
+    "breakup_source": "IslandMASKS_B red channel",
+    "layout": "authored winding dirt path and incomplete stone region; not recovered original layout"
+  }
+}
